@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bliss Contractor | Jasa Bangun & Renovasi</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .bliss-container { max-width: 480px; margin: 0 auto; background-color: #ffffff; min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+        .back-btn { color: #800000; text-decoration: none; font-weight: 600; font-size: 1rem; }
+        
+        /* Tema Warna Maroon */
+        .text-maroon { color: #800000; }
+        .bg-maroon { background-color: #800000; color: #ffffff; }
+        
+        /* Styling Layanan (Service Card) */
+        .service-item { border-left: 4px solid #800000; background-color: #f9f9f9; padding: 15px; border-radius: 0 8px 8px 0; margin-bottom: 15px; }
+        .service-icon { font-size: 1.5rem; color: #800000; margin-right: 15px; }
+        
+        /* Styling Kotak Portofolio */
+        .portfolio-card { border: none; border-radius: 12px; overflow: hidden; margin-bottom: 20px; }
+        .portfolio-img { width: 100%; height: 220px; object-fit: cover; }
+        
+        /* Tombol Konsultasi */
+        .btn-consult { background-color: #800000; color: #ffffff; border-radius: 50px; padding: 12px 20px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: none; }
+        .btn-consult:hover { background-color: #5e0000; color: #ffffff; }
+    </style>
+</head>
+<body>
+
+<div class="bliss-container position-relative pb-5">
+    
+    <!-- Top Navigation (Tombol Kembali) -->
+    <div class="p-3 border-bottom d-flex align-items-center">
+        <a href="index.html" class="back-btn d-flex align-items-center gap-2">
+            <i class="bi bi-arrow-left fs-5"></i> Kembali ke Menu
+        </a>
+    </div>
+
+    <!-- Header Content -->
+    <div class="p-4 text-center">
+        <h3 class="fw-bold text-maroon mb-1">Bliss Contractor</h3>
+        <p class="text-muted small">Wujudkan Properti Impian Tanpa Pusing</p>
+        
+        <!-- Statistik Trust (Menggunakan data yang sudah disepakati) -->
+        <div class="d-flex justify-content-center gap-4 mt-3 mb-4">
+            <div class="text-center">
+                <h4 class="fw-bold text-maroon mb-0">100+</h4>
+                <small class="text-muted">Hunian Jadi</small>
+            </div>
+            <div class="text-center border-start ps-4">
+                <h4 class="fw-bold text-maroon mb-0">9</h4>
+                <small class="text-muted">Villa Eksklusif</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bagian Layanan Kami -->
+    <div class="px-4 mb-4">
+        <h6 class="fw-bold mb-3" style="color: #333;">Layanan Utama</h6>
+        
+        <div class="service-item d-flex align-items-center shadow-sm">
+            <i class="bi bi-compass service-icon"></i>
+            <div>
+                <h6 class="fw-bold mb-0">Desain Arsitektur</h6>
+                <small class="text-muted">Perencanaan 2D & 3D Fasad</small>
+            </div>
+        </div>
+        
+        <div class="service-item d-flex align-items-center shadow-sm">
+            <i class="bi bi-bricks service-icon"></i>
+            <div>
+                <h6 class="fw-bold mb-0">Bangun dari Nol</h6>
+                <small class="text-muted">Konstruksi material premium</small>
+            </div>
+        </div>
+
+        <div class="service-item d-flex align-items-center shadow-sm">
+            <i class="bi bi-hammer service-icon"></i>
+            <div>
+                <h6 class="fw-bold mb-0">Renovasi Hunian</h6>
+                <small class="text-muted">Perbaikan & perluasan area</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bagian Portofolio (Tempat menaruh gambar nanti) -->
+    <div class="px-4 mb-5">
+        <h6 class="fw-bold mb-3" style="color: #333;">Portofolio Pekerjaan</h6>
+        
+        <!-- Placeholder Portofolio 1 -->
+        <div class="portfolio-card shadow-sm">
+            <!-- Gambar ini bisa diganti nanti saat tahap memasukkan aset -->
+            <img src="https://via.placeholder.com/400x220?text=Foto+Proyek+1" class="portfolio-img" alt="Proyek 1">
+            <div class="p-3 bg-light border-top">
+                <h6 class="fw-bold text-maroon mb-0">Rumah Tropis Modern</h6>
+                <small class="text-muted">Penyelesaian: 4 Bulan</small>
+            </div>
+        </div>
+
+        <!-- Placeholder Portofolio 2 -->
+        <div class="portfolio-card shadow-sm">
+            <img src="https://via.placeholder.com/400x220?text=Foto+Proyek+2" class="portfolio-img" alt="Proyek 2">
+            <div class="p-3 bg-light border-top">
+                <h6 class="fw-bold text-maroon mb-0">Renovasi Villa Eksklusif</h6>
+                <small class="text-muted">Penyelesaian: 2 Bulan</small>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-5 pb-4">
+            <p class="text-muted mb-0" style="font-size: 0.75rem;">&copy; 2026 awrcreativeblissgroup</p>
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
