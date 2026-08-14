@@ -81,6 +81,26 @@
             background-color: #5e0000; /* Maroon yang lebih gelap saat di-hover */
             color: #ffffff;
         }
+        /* Horizontal Scroll Estetik */
+        .scroll-wrapper {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding-bottom: 15px;
+            /* Menyembunyikan garis scrollbar agar bersih */
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE 10+ */
+        }
+        .scroll-wrapper::-webkit-scrollbar {
+            display: none; /* Safari/Chrome */
+        }
+        .partner-poster {
+            height: 320px; /* Menyamakan tinggi semua poster */
+            width: auto; /* Lebar menyesuaikan otomatis agar rasio tidak gepeng */
+            border-radius: 12px;
+            border: 1px solid #eaeaea;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
     </style>
 </head>
 <body>
