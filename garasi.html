@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bliss Garasi Transport</title>
+    <title>Bliss Garasi Transport | Mitra Perjalanan Jogja</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -13,73 +13,112 @@
         .bliss-container { max-width: 480px; margin: 0 auto; background-color: #ffffff; min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
         .back-btn { color: #800000; text-decoration: none; font-weight: 600; font-size: 1rem; }
         
-        /* Tombol PDF Maroon */
         .btn-pdf { background-color: #800000; color: #ffffff; border-radius: 8px; padding: 12px 20px; font-weight: 600; transition: all 0.3s; border: none; }
         .btn-pdf:hover { background-color: #5e0000; color: #ffffff; }
         
-        /* Styling Kotak Foto Mobil */
-        .car-card { border: 1px solid #eaeaea; border-radius: 12px; overflow: hidden; margin-bottom: 20px; transition: transform 0.3s; }
-        .car-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(128,0,0,0.1); border-color: #800000;}
-        .car-img { width: 100%; height: 200px; object-fit: cover; }
+        /* Styling Baru untuk Grid Armada & Hotel */
+        .grid-card { border: 1px solid #eaeaea; border-radius: 12px; overflow: hidden; transition: transform 0.3s; height: 100%; background: #fff;}
+        .grid-card:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(128,0,0,0.1); border-color: #800000;}
+        .grid-img { width: 100%; height: 120px; object-fit: cover; }
+        .hotel-img { width: 100%; height: auto; object-fit: contain; }
+        
+        .badge-keunggulan { background-color: #fdf5f5; border: 1px solid #f5c2c2; color: #800000; padding: 6px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; }
     </style>
 </head>
 <body>
 
 <div class="bliss-container position-relative pb-5">
     
-    <!-- Top Navigation (Tombol Kembali) -->
+    <!-- Top Navigation -->
     <div class="p-3 border-bottom d-flex align-items-center">
         <a href="index.html" class="back-btn d-flex align-items-center gap-2">
             <i class="bi bi-arrow-left fs-5"></i> Kembali ke Menu
         </a>
     </div>
 
-    <!-- Header Content -->
+    <!-- Header Content & Keunggulan -->
     <div class="p-4 text-center pb-2">
         <h3 class="fw-bold" style="color: #800000;">Bliss Garasi Transport</h3>
-        <p class="text-muted small">Layanan Rental Mobil Premium & Terpercaya</p>
+        <p class="text-muted small mb-3">The Happiness of Tour & Travel Yogyakarta</p>
         
-        <!-- TOMBOL BUKA PDF -->
-        <!-- Ganti tanda # di bawah ini dengan link Google Drive PDF kamu -->
-        <a href="https://drive.google.com/file/d/13xD9RfAH96s5D76gOLPa04D4JFGRCN3m/view?usp=sharing" target="_blank" class="btn btn-pdf w-100 shadow-sm d-flex justify-content-center align-items-center gap-2 mt-3 mb-4">
+        <!-- Sektor Sifat Layanan (Mengambil dari Poster) -->
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
+            <span class="badge-keunggulan"><i class="bi bi-clock-history"></i> Layanan 24 Jam</span>
+            <span class="badge-keunggulan"><i class="bi bi-translate"></i> English Speaking Driver</span>
+            <span class="badge-keunggulan"><i class="bi bi-geo-alt"></i> City Tour & Antar Jemput</span>
+        </div>
+        
+        <a href="https://drive.google.com/file/d/13xD9RfAH96s5D76gOLPa04D4JFGRCN3m/view?usp=sharing" target="_blank" class="btn btn-pdf w-100 shadow-sm d-flex justify-content-center align-items-center gap-2 mt-2 mb-2">
             <i class="bi bi-file-earmark-pdf fs-5"></i> Unduh Pricelist (PDF)
         </a>
     </div>
 
-    <!-- Bagian Foto-foto Armada -->
-    <div class="px-4">
-        <h5 class="fw-bold text-start mb-3" style="color: #333;">Armada Pilihan Kami</h5>
-        
-        <!-- Foto Mobil 1 -->
-        <div class="car-card shadow-sm">
-            <!-- Ganti src dengan nama file fotomu, misal: mobil1.jpg -->
-            <img src="https://via.placeholder.com/400x200?text=Foto+Mobil+1" class="car-img" alt="Mobil 1">
-            <div class="p-3 text-start">
-                <h6 class="fw-bold mb-1" style="color: #800000;">Toyota Alphard / Vellfire</h6>
-                <p class="text-muted small mb-0">Include Driver + BBM</p>
-            </div>
+    <!-- Sektor 1: Mitra Hotel Eksklusif -->
+    <div class="px-4 mb-4">
+        <h6 class="fw-bold text-start mb-3" style="color: #333;">Official Transport Partner Kami</h6>
+        <div class="row g-2">
+            <!-- Ganti src dengan nama file poster hotel -->
+            <div class="col-6"><img src="The Rich Hotel.jpeg" class="grid-card hotel-img shadow-sm" alt="The Rich Hotel"></div>
+            <div class="col-6"><img src="D'Pavilion Malioboro.jpeg" class="grid-card hotel-img shadow-sm" alt="D'Pavilion"></div>
+            <div class="col-6"><img src="Noola Hotel Malioboro.jpeg" class="grid-card hotel-img shadow-sm" alt="Noola Hotel"></div>
+            <div class="col-6"><img src="Omah Siliran .jpeg" class="grid-card hotel-img shadow-sm" alt="Omah Siliran"></div>
         </div>
-
-        <!-- Foto Mobil 2 -->
-        <div class="car-card shadow-sm">
-            <!-- Ganti src dengan nama file fotomu, misal: mobil2.jpg -->
-            <img src="https://via.placeholder.com/400x200?text=Foto+Mobil+2" class="car-img" alt="Mobil 2">
-            <div class="p-3 text-start">
-                <h6 class="fw-bold mb-1" style="color: #800000;">Innova Zenix Hybrid</h6>
-                <p class="text-muted small mb-0">Nyaman & Irit BBM</p>
-            </div>
-        </div>
-        
-        <!-- Silakan copy-paste blok 'Foto Mobil' ke bawah jika fotonya lebih dari 2 -->
-
     </div>
-    <div class="text-center mt-5 pb-4">
-            <p class="text-muted mb-0" style="font-size: 0.75rem;">&copy; 2026 awrcreativeblissgroup</p>
+
+    <!-- Sektor 2: Daftar Armada -->
+    <div class="px-4 mb-4">
+        <h6 class="fw-bold text-start mb-3" style="color: #333;">Armada Pilihan Terbaik</h6>
+        <div class="row g-2">
+            
+            <div class="col-6">
+                <div class="grid-card shadow-sm text-center pb-2">
+                    <img src="Bliss Garasi Foto Mobil 1.jpg" class="grid-img" alt="Innova Zenix">
+                    <h6 class="fw-bold mb-0 mt-2" style="font-size: 0.85rem; color: #800000;">Innova Zenix</h6>
+                    <small class="text-muted" style="font-size: 0.7rem;">Hybrid / Nyaman</small>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="grid-card shadow-sm text-center pb-2">
+                    <img src="Bliss Garasi Foto Mobil 1.jpg" class="grid-img" alt="Alphard">
+                    <h6 class="fw-bold mb-0 mt-2" style="font-size: 0.85rem; color: #800000;">Toyota Alphard</h6>
+                    <small class="text-muted" style="font-size: 0.7rem;">VIP / Premium</small>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="grid-card shadow-sm text-center pb-2">
+                    <img src="Bliss Garasi Foto Mobil 1.jpg" class="grid-img" alt="Hiace Premio">
+                    <h6 class="fw-bold mb-0 mt-2" style="font-size: 0.85rem; color: #800000;">Hiace Premio</h6>
+                    <small class="text-muted" style="font-size: 0.7rem;">14 Seat / Luxury</small>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="grid-card shadow-sm text-center pb-2">
+                    <img src="Bliss Garasi Foto Mobil 1.jpg" class="grid-img" alt="Xpander">
+                    <h6 class="fw-bold mb-0 mt-2" style="font-size: 0.85rem; color: #800000;">Avanza & Xpander</h6>
+                    <small class="text-muted" style="font-size: 0.7rem;">Ekonomis & Bersih</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Sektor 3: Kemitraan Strategis (Dokumentasi TTD) -->
+    <div class="px-4 mb-4">
+        <h6 class="fw-bold text-start mb-2" style="color: #333;">Legalitas & Kemitraan</h6>
+        <p class="text-muted small lh-sm">Komitmen kami memberikan layanan operasional yang profesional dan legal untuk setiap mitra.</p>
+        <img src="Bliss Garasi Transport 1.jpeg" class="img-fluid rounded shadow-sm" alt="Penandatanganan MoU">
+    </div>
+
+    <!-- Footer Copyright -->
+    <div class="text-center mt-5 pb-4 border-top pt-4 mx-4">
+        <p class="text-muted mb-0" style="font-size: 0.75rem;">&copy; 2026 awrcreativeblissgroup</p>
     </div>
 
 </div>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
