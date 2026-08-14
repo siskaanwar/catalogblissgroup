@@ -3,200 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bliss Garasi Transport | Mitra Perjalanan Jogja</title>
+    <title>Bliss Group | Ekosistem Properti Terintegrasi</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .bliss-container { max-width: 480px; margin: 0 auto; background-color: #ffffff; min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
-        .back-btn { color: #800000; text-decoration: none; font-weight: 600; font-size: 1rem; }
-        
-        .btn-pdf { background-color: #800000; color: #ffffff; border-radius: 8px; padding: 12px 20px; font-weight: 600; transition: all 0.3s; border: none; }
-        .btn-pdf:hover { background-color: #5e0000; color: #ffffff; }
-        
-        .badge-keunggulan { background-color: #fdf5f5; border: 1px solid #f5c2c2; color: #800000; padding: 6px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; }
-
-        /* Styling Horizontal Scroll untuk Hotel */
-        .scroll-wrapper {
-            display: flex;
-            overflow-x: auto;
-            gap: 15px;
-            padding-bottom: 10px;
-            scrollbar-width: none; /* Menyembunyikan scrollbar di Firefox */
-            -ms-overflow-style: none; /* Menyembunyikan scrollbar di IE */
-            scroll-snap-type: x mandatory; /* Efek magnet saat digeser */
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
         }
-        .scroll-wrapper::-webkit-scrollbar {
-            display: none; /* Menyembunyikan scrollbar di Chrome/Safari */
+        .bliss-container {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            min-height: 100vh;
+            padding-bottom: 80px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
         }
-        .partner-card {
-            flex: 0 0 220px; /* Memaksa lebar kartu tetap 220px agar bisa digeser */
+        .brand-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        /* Mengubah tema warna menjadi Maroon */
+        .text-maroon {
+            color: #800000;
+        }
+        .menu-card {
+            background: #ffffff;
             border: 1px solid #eaeaea;
             border-radius: 12px;
-            overflow: hidden;
-            background-color: #fff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            scroll-snap-align: start; /* Efek magnet saat digeser */
-            display: flex;
-            flex-direction: column;
-        }
-        .partner-img {
-            width: 100%;
-            height: 250px; /* Tinggi gambar diseragamkan */
-            object-fit: cover; /* Gambar akan terpotong rapi menyesuaikan kotak */
-            border-bottom: 1px solid #f0f0f0;
-        }
-        .partner-name {
-            padding: 12px 10px;
+            padding: 20px 15px;
             text-align: center;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            display: block;
+            height: 100%;
         }
-        .partner-name h6 { margin: 0; font-size: 0.9rem; font-weight: 700; color: #800000; }
-        .partner-name small { font-size: 0.7rem; color: #6c757d; }
-
-        /* Styling Grid Armada */
-        .grid-card { border: 1px solid #eaeaea; border-radius: 12px; overflow: hidden; transition: transform 0.3s; height: 100%; background: #fff;}
-        .grid-img { width: 100%; height: 120px; object-fit: cover; }
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(128, 0, 0, 0.1); /* Bayangan kemerahan */
+            border-color: #800000;
+        }
+        .menu-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #800000; /* Ikon juga disesuaikan */
+        }
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 440px;
+            z-index: 1000;
+            padding: 0 20px;
+        }
+        /* Tombol CTA Maroon */
+        .btn-maroon {
+            background-color: #800000;
+            color: #ffffff;
+            border-radius: 50px;
+            padding: 12px 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: none;
+        }
+        .btn-maroon:hover {
+            background-color: #5e0000; /* Maroon yang lebih gelap saat di-hover */
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
 
-<div class="bliss-container position-relative pb-5">
+<div class="bliss-container position-relative">
     
-    <!-- Top Navigation -->
-    <div class="p-3 border-bottom d-flex align-items-center">
-        <a href="index.html" class="back-btn d-flex align-items-center gap-2">
-            <i class="bi bi-arrow-left fs-5"></i> Kembali ke Menu
+    <!-- Header Section -->
+    <div class="text-center pt-5 pb-4 px-3">
+        <img src="logo_bliss.png" alt="Bliss Group Logo" class="brand-logo rounded-circle shadow-sm">
+        <h2 class="fw-bold text-maroon mt-2 fs-4">BLISS GROUP</h2>
+        <p class="text-muted small mb-0">Holding Company of Bliss Ecosystem</p>
+        <div class="d-flex justify-content-center gap-3 mt-2 mb-4">
+            <a href="https://www.instagram.com/blissgroupofficial?igsh=YWFrc2xjMGNteGdl&utm_source=qr" target="_blank" class="text-maroon text-decoration-none" style="transition: transform 0.3s; display: inline-block;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                <i class="bi bi-instagram fs-4"></i>
+            </a>
+            <a href="https://www.tiktok.com/@blissgroupofficial?is_from_webapp=1&sender_device=pc" target="_blank" class="text-maroon text-decoration-none" style="transition: transform 0.3s; display: inline-block;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                <i class="bi bi-tiktok fs-4"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Grid Menu Section -->
+    <div class="container px-4">
+        <div class="row g-3">
+            <!-- Menu 1 -->
+            <div class="col-6">
+                <!-- Ganti '#' dengan link tujuan -->
+                <a href="villa.html" class="menu-card shadow-sm">
+                    <i class="bi bi-house-door menu-icon"></i>
+                    <h6 class="fw-bold mb-1 fs-6">Bliss Villa</h6>
+                    <small class="text-muted" style="font-size: 0.7rem;">Katalog Hunian Eksklusif</small>
+                </a>
+            </div>
+            <!-- Menu 2 -->
+            <div class="col-6">
+                <a href="kontraktor.html" class="menu-card shadow-sm">
+                    <i class="bi bi-tools menu-icon"></i>
+                    <h6 class="fw-bold mb-1 fs-6">Bliss Contractor</h6>
+                    <small class="text-muted" style="font-size: 0.7rem;">Jasa Bangun & Renovasi</small>
+                </a>
+            </div>
+            <!-- Menu 3 -->
+            <div class="col-6">
+                <a href="garasi.html" class="menu-card shadow-sm">
+                    <i class="bi bi-person-badge menu-icon"></i>
+                    <h6 class="fw-bold mb-1 fs-6">Bliss Garasi Transport</h6>
+                    <small class="text-muted" style="font-size: 0.7rem;">Rental Mobil</small>
+                </a>
+            </div>
+            <!-- Menu 4 -->
+            <div class="col-6">
+                <a href="#" class="menu-card shadow-sm">
+                    <i class="bi bi-car-front menu-icon"></i>
+                    <h6 class="fw-bold mb-1 fs-6">Bliss Auto Care & Car Leather</h6>
+                    <small class="text-muted" style="font-size: 0.7rem;">Perawatan Kendaraan</small>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Bottom CTA -->
+    <div class="sticky-cta">
+        <a href="https://maps.app.goo.gl/dyX7xG4oUZxH8M3DA" target="_blank" class="btn btn-maroon w-100 shadow d-flex justify-content-center align-items-center gap-2">
+            <i class="bi bi-geo-alt fs-5"></i> Kunjungi Kantor Kami
         </a>
     </div>
-
-    <!-- Header Content & Keunggulan -->
-    <div class="p-4 text-center pb-2">
-        <h3 class="fw-bold" style="color: #800000;">Bliss Garasi Transport</h3>
-        <p class="text-muted small mb-3">The Happiness of Tour & Travel Yogyakarta</p>
-        
-        <!-- Sektor Sifat Layanan -->
-        <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
-            <span class="badge-keunggulan"><i class="bi bi-clock-history"></i> Layanan 24 Jam</span>
-            <span class="badge-keunggulan"><i class="bi bi-translate"></i> English Speaking Driver</span>
-            <span class="badge-keunggulan"><i class="bi bi-geo-alt"></i> City Tour & Drop Off</span>
-        </div>
-        
-        <!-- Tombol PDF -->
-        <a href="https://drive.google.com/file/d/13xD9RfAH96s5D76gOLPa04D4JFGRCN3m/view?usp=sharing" target="_blank" class="btn btn-pdf w-100 shadow-sm d-flex justify-content-center align-items-center gap-2 mt-2 mb-2">
-            <i class="bi bi-file-earmark-pdf fs-5"></i> Unduh Pricelist (PDF)
-        </a>
-    </div>
-
-    <!-- Sektor 1: Mitra Hotel Eksklusif (Horizontal Scroll) -->
-    <div class="px-4 mb-4">
-        <h6 class="fw-bold text-start mb-3" style="color: #333;">Official Transport Partner Kami</h6>
-        
-        <!-- Wadah Horizontal Scroll -->
-        <div class="scroll-wrapper">
-            
-            <!-- Kartu Hotel 1 -->
-            <div class="partner-card">
-                <img src="The Rich Hotel.jpeg" class="partner-img" alt="The Rich Hotel">
-                <div class="partner-name">
-                    <h6>The Rich Jogja Hotel</h6>
-                    <small>Official Partner</small>
-                </div>
-            </div>
-
-            <!-- Kartu Hotel 2 -->
-            <div class="partner-card">
-                <img src="Noola Hotel Malioboro.jpeg" class="partner-img" alt="Noola Hotel">
-                <div class="partner-name">
-                    <h6>Noola Hotel Malioboro</h6>
-                    <small>Official Partner</small>
-                </div>
-            </div>
-
-            <!-- Kartu Hotel 3 -->
-            <div class="partner-card">
-                <img src="D'Pavilion Malioboro.jpeg" class="partner-img" alt="D'Pavilion">
-                <div class="partner-name">
-                    <h6>D'Pavilion Malioboro</h6>
-                    <small>Official Partner</small>
-                </div>
-            </div>
-
-            <!-- Kartu Hotel 4 -->
-            <div class="partner-card">
-                <img src="Omah Siliran .jpeg" class="partner-img" alt="Omah Siliran">
-                <div class="partner-name">
-                    <h6>Omah Siliran Heritage</h6>
-                    <small>Official Partner</small>
-                </div>
-            </div>
-
-            <!-- Kartu Hotel 5 -->
-            <div class="partner-card">
-                <img src="Clemie Huis.jpeg" class="partner-img" alt="Clemmie Huis">
-                <div class="partner-name">
-                    <h6>Clemmie Huis</h6>
-                    <small>Official Partner</small>
-                </div>
-            </div>
-
-        </div>
-        <p class="text-muted text-center small mt-2 mb-0" style="font-size: 0.75rem;">
-            <i class="bi bi-arrow-left-right"></i> Geser ke kiri/kanan untuk melihat
-        </p>
-    </div>
-
-    <!-- Sektor 2: Daftar Armada Utama -->
-    <div class="px-4 mb-4 mt-2">
-        <h6 class="fw-bold text-start mb-3" style="color: #333;">Armada Pilihan Terbaik</h6>
-        <div class="row g-2">
-            
-            <div class="col-6">
-                <div class="grid-card shadow-sm text-center pb-2">
-                    <img src="Bliss Garasi Foto Mobil 1.jpg" class="grid-img" alt="Innova Zenix">
-                    <h6 class="fw-bold mb-0 mt-2" style="font-size: 0.85rem; color: #800000;">Innova Zenix</h6>
-                    <small class="text-muted" style="font-size: 0.7rem;">Hybrid / Nyaman</small>
-                </div>
-            </div>
-
-            <div class="col-6">
-                <div class="grid-card shadow-sm text-center pb-2">
-                    <img src="Bliss Garasi Foto Mobil 1.jpg" class="grid-img" alt="Alphard">
-                    <h6 class="fw-bold mb-0 mt-2" style="font-size: 0.85rem; color: #800000;">Toyota Alphard</h6>
-                    <small class="text-muted" style="font-size: 0.7rem;">VIP / Premium</small>
-                </div>
-            </div>
-
-            <div class="col-6">
-                <div class="grid-card shadow-sm text-center pb-2">
-                    <img src="Bliss Garasi Foto Mobil 1.jpg" class="grid-img" alt="Hiace Premio">
-                    <h6 class="fw-bold mb-0 mt-2" style="font-size: 0.85rem; color: #800000;">Hiace Premio</h6>
-                    <small class="text-muted" style="font-size: 0.7rem;">14 Seat / Luxury</small>
-                </div>
-            </div>
-
-            <div class="col-6">
-                <div class="grid-card shadow-sm text-center pb-2">
-                    <img src="Bliss Garasi Foto Mobil 1.jpg" class="grid-img" alt="Xpander">
-                    <h6 class="fw-bold mb-0 mt-2" style="font-size: 0.85rem; color: #800000;">Avanza & Xpander</h6>
-                    <small class="text-muted" style="font-size: 0.7rem;">Ekonomis & Bersih</small>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- Sektor 3: Kemitraan Strategis (Dokumentasi TTD) -->
-    <div class="px-4 mb-4 mt-2">
-        <h6 class="fw-bold text-start mb-2" style="color: #333;">Legalitas & Kemitraan</h6>
-        <p class="text-muted small lh-sm">Komitmen kami memberikan layanan operasional yang profesional dan legal untuk setiap mitra.</p>
-        <img src="Bliss Garasi Transport 1.jpeg" class="img-fluid rounded shadow-sm" alt="Penandatanganan MoU">
-    </div>
-
-    <!-- Footer Copyright -->
-    <div class="text-center mt-5 pb-4 border-top pt-4 mx-4">
-        <p class="text-muted mb-0" style="font-size: 0.75rem;">&copy; 2026 awrcreativeblissgroup</p>
+    <div class="text-center mt-5 pb-4">
+            <p class="text-muted mb-0" style="font-size: 0.75rem;">&copy; 2026 awrcreativeblissgroup</p>
     </div>
 
 </div>
