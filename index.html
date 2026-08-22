@@ -3,152 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bliss Group | Ekosistem Properti Terintegrasi</title>
+    <title>Bliss Group | Holding Company</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
+        /* 1. BACKGROUND HALAMAN UTAMA (KHUSUS DESKTOP/LUAR) */
+        body { 
+            /* Ganti link gambar Unsplash ini dengan gambar proyek terbagus milik Bliss Group jika ada */
+            background: linear-gradient(rgba(20, 20, 20, 0.8), rgba(128, 0, 0, 0.85)), 
+                        url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2000&auto=format&fit=crop') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
         }
-        .bliss-container {
-            max-width: 480px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            min-height: 100vh;
-            padding-bottom: 80px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+        
+        .bliss-container { 
+            max-width: 480px; 
+            margin: 0 auto; 
+            background-color: #ffffff; 
+            min-height: 100vh; 
+            box-shadow: 0 0 40px rgba(0,0,0,0.5); /* Bayangan lebih kuat agar pop-out dari background */
         }
-        .brand-logo {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-            margin-bottom: 15px;
-        }
-        /* Mengubah tema warna menjadi Maroon */
-        .text-maroon {
-            color: #800000;
-        }
-        .menu-card {
-            background: #ffffff;
-            border: 1px solid #eaeaea;
-            border-radius: 12px;
-            padding: 20px 15px;
-            text-align: center;
-            text-decoration: none;
-            color: #333;
-            transition: all 0.3s ease;
+        
+        /* Tema Warna Maroon */
+        .text-maroon { color: #800000; }
+        .bg-maroon { background-color: #800000; color: #ffffff; }
+
+        /* 2. STYLING MENU MODEL GAMBAR */
+        .img-menu-card {
             display: block;
-            height: 100%;
+            position: relative;
+            height: 150px;
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .menu-card:hover {
+        .img-menu-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(128, 0, 0, 0.1); /* Bayangan kemerahan */
-            border-color: #800000;
+            box-shadow: 0 10px 20px rgba(128,0,0,0.3);
         }
-        .menu-icon {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            color: #800000; /* Ikon juga disesuaikan */
-        }
-        .sticky-cta {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+        .img-menu-bg {
             width: 100%;
-            max-width: 440px;
-            z-index: 1000;
-            padding: 0 20px;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
         }
-        /* Tombol CTA Maroon */
-        .btn-maroon {
-            background-color: #800000;
-            color: #ffffff;
-            border-radius: 50px;
-            padding: 12px 20px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s;
-            border: none;
+        .img-menu-card:hover .img-menu-bg {
+            transform: scale(1.1); /* Efek zoom saat disentuh/di-hover */
         }
-        .btn-maroon:hover {
-            background-color: #5e0000; /* Maroon yang lebih gelap saat di-hover */
-            color: #ffffff;
+        
+        /* Lapisan Gradasi Gelap di Atas Gambar Menu */
+        .img-menu-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to top, rgba(128,0,0,0.95) 0%, rgba(0,0,0,0.2) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 15px;
+            color: white;
         }
+        .img-menu-overlay h6 { margin-bottom: 2px; font-weight: 700; letter-spacing: 0.5px; }
+        .img-menu-overlay small { font-size: 0.7rem; opacity: 0.9; }
+        .img-menu-icon { position: absolute; top: 12px; right: 15px; font-size: 1.2rem; color: white; opacity: 0.8; }
+
+        .btn-kunjungan { border-radius: 50px; padding: 12px 20px; font-weight: 600; letter-spacing: 1px; transition: all 0.3s; }
+        .btn-kunjungan:hover { background-color: #5e0000; color: #ffffff; transform: scale(1.02); }
+        .social-icon { font-size: 1.5rem; color: #800000; margin: 0 10px; transition: transform 0.3s; display: inline-block; }
+        .social-icon:hover { transform: scale(1.2); color: #5e0000; }
     </style>
 </head>
 <body>
 
-<div class="bliss-container position-relative">
+<div class="bliss-container position-relative pb-4">
     
-    <!-- Header Section -->
-    <div class="text-center pt-5 pb-4 px-3">
-        <img src="logo_bliss.png" alt="Bliss Group Logo" class="brand-logo rounded-circle shadow-sm">
-        <h2 class="fw-bold text-maroon mt-2 fs-4">BLISS GROUP</h2>
-        <p class="text-muted small mb-0">Holding Company of Bliss Ecosystem</p>
-        <div class="d-flex justify-content-center gap-3 mt-2 mb-4">
-            <a href="https://www.instagram.com/blissgroupofficial?igsh=YWFrc2xjMGNteGdl&utm_source=qr" target="_blank" class="text-maroon text-decoration-none" style="transition: transform 0.3s; display: inline-block;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
-                <i class="bi bi-instagram fs-4"></i>
-            </a>
-            <a href="https://www.tiktok.com/@blissgroupofficial?is_from_webapp=1&sender_device=pc" target="_blank" class="text-maroon text-decoration-none" style="transition: transform 0.3s; display: inline-block;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
-                <i class="bi bi-tiktok fs-4"></i>
-            </a>
+    <!-- Bagian Header & Logo -->
+    <div class="text-center pt-5 pb-3">
+        <!-- Pastikan logo_bliss.png ada di folder yang sama -->
+        <img src="logo_bliss.png" alt="Bliss Group Logo" class="img-fluid mb-3" style="max-width: 120px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+        <h4 class="fw-bold text-maroon mb-1">BLISS GROUP</h4>
+        <p class="text-muted small mb-3">Holding Company of Bliss Ecosystem</p>
+        
+        <!-- Social Media Icons -->
+        <div>
+            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
         </div>
     </div>
 
-    <!-- Grid Menu Section -->
-    <div class="container px-4">
+    <!-- Bagian Menu (Grid Model Gambar) -->
+    <div class="px-4">
         <div class="row g-3">
-            <!-- Menu 1 -->
+            
+            <!-- Menu 1: Villa -->
             <div class="col-6">
-                <!-- Ganti '#' dengan link tujuan -->
-                <a href="villa.html" class="menu-card shadow-sm">
-                    <i class="bi bi-house-door menu-icon"></i>
-                    <h6 class="fw-bold mb-1 fs-6">Bliss Villa</h6>
-                    <small class="text-muted" style="font-size: 0.7rem;">Katalog Hunian Eksklusif</small>
+                <a href="villa.html" class="img-menu-card">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=500&auto=format&fit=crop" class="img-menu-bg" alt="Villa">
+                    <div class="img-menu-overlay">
+                        <i class="bi bi-house-door img-menu-icon"></i>
+                        <h6>Bliss Villa</h6>
+                        <small>Katalog Eksklusif</small>
+                    </div>
                 </a>
             </div>
-            <!-- Menu 2 -->
+
+            <!-- Menu 2: Contractor -->
             <div class="col-6">
-                <a href="kontraktor.html" class="menu-card shadow-sm">
-                    <i class="bi bi-tools menu-icon"></i>
-                    <h6 class="fw-bold mb-1 fs-6">Bliss Contractor</h6>
-                    <small class="text-muted" style="font-size: 0.7rem;">Jasa Bangun & Renovasi</small>
+                <a href="contractor.html" class="img-menu-card">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=500&auto=format&fit=crop" class="img-menu-bg" alt="Contractor">
+                    <div class="img-menu-overlay">
+                        <i class="bi bi-tools img-menu-icon"></i>
+                        <h6>Bliss Contractor</h6>
+                        <small>Bangun & Renovasi</small>
+                    </div>
                 </a>
             </div>
-            <!-- Menu 3 -->
+
+            <!-- Menu 3: Transport -->
             <div class="col-6">
-                <a href="garasi.html" class="menu-card shadow-sm">
-                    <i class="bi bi-person-badge menu-icon"></i>
-                    <h6 class="fw-bold mb-1 fs-6">Bliss Garasi Transport</h6>
-                    <small class="text-muted" style="font-size: 0.7rem;">Rental Mobil</small>
+                <a href="garasi.html" class="img-menu-card">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=500&auto=format&fit=crop" class="img-menu-bg" alt="Transport">
+                    <div class="img-menu-overlay">
+                        <i class="bi bi-car-front img-menu-icon"></i>
+                        <h6>Garasi Transport</h6>
+                        <small>Rental Mobil Jogja</small>
+                    </div>
                 </a>
             </div>
-            <!-- Menu 4 -->
+
+            <!-- Menu 4: Auto Care -->
             <div class="col-6">
-                <a href="#" class="menu-card shadow-sm">
-                    <i class="bi bi-car-front menu-icon"></i>
-                    <h6 class="fw-bold mb-1 fs-6">Bliss Auto Care & Car Leather</h6>
-                    <small class="text-muted" style="font-size: 0.7rem;">Perawatan Kendaraan</small>
+                <a href="#" class="img-menu-card">
+                    <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&w=500&auto=format&fit=crop" class="img-menu-bg" alt="Auto Care">
+                    <div class="img-menu-overlay">
+                        <i class="bi bi-droplet img-menu-icon"></i>
+                        <h6>Bliss Auto Care</h6>
+                        <small>Perawatan Kendaraan</small>
+                    </div>
                 </a>
             </div>
+
         </div>
     </div>
 
-    <!-- Sticky Bottom CTA -->
-    <div class="sticky-cta">
-        <a href="https://maps.app.goo.gl/dyX7xG4oUZxH8M3DA" target="_blank" class="btn btn-maroon w-100 shadow d-flex justify-content-center align-items-center gap-2">
-            <i class="bi bi-geo-alt fs-5"></i> Kunjungi Kantor Kami
+    <!-- Tombol CTA Bawah -->
+    <div class="px-4 mt-4 pt-3 border-top">
+        <a href="#" class="btn bg-maroon w-100 shadow btn-kunjungan d-flex justify-content-center align-items-center gap-2">
+            <i class="bi bi-geo-alt fs-5"></i> KUNJUNGI KANTOR KAMI
         </a>
-    </div>
-    <div class="text-center mt-5 pb-4">
+        
+        <!-- Footer -->
+        <div class="text-center mt-3">
             <p class="text-muted mb-0" style="font-size: 0.75rem;">&copy; 2026 awrcreativeblissgroup</p>
+        </div>
     </div>
 
 </div>
