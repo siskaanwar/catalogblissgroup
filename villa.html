@@ -16,7 +16,7 @@
         .text-maroon { color: #800000; }
         .bg-maroon { background-color: #800000; color: #ffffff; }
 
-        /* Styling Kartu Villa (Biar Rapi & Terpisah) */
+        /* Styling Kartu Villa */
         .villa-card {
             background-color: #fff;
             border: 1px solid #eaeaea;
@@ -26,16 +26,17 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.06);
         }
         
-        /* Menampilkan Gambar Full Tanpa Dipotong */
+        /* Gambar Diberi Jarak (Padding) Agar Tidak Penuh Ke Tepi */
         .villa-img {
             width: 100%;
-            height: auto; /* Membiarkan tinggi gambar menyesuaikan aslinya */
+            height: auto; 
+            padding: 16px 16px 8px 16px; /* Jarak bingkai putih: Atas, Kanan, Bawah, Kiri */
+            border-radius: 24px; /* Ujung gambar sedikit dilengkungkan */
             display: block;
         }
         
         .villa-info {
-            padding: 16px;
-            border-top: 4px solid #800000;
+            padding: 8px 16px 20px 16px; /* Penyesuaian jarak teks dengan gambar */
         }
         
         /* Styling Badge Spesifikasi */
