@@ -3,71 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katalog Bliss Villa</title>
+    <title>Katalog Bliss Villa | Eksklusif</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f5f7; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         .bliss-container { max-width: 480px; margin: 0 auto; background-color: #ffffff; min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
-        .back-btn { color: #800000; text-decoration: none; font-weight: 500; font-size: 1.1rem; }
+        .back-btn { color: #800000; text-decoration: none; font-weight: 600; font-size: 1rem; }
+        
+        .text-maroon { color: #800000; }
+        .bg-maroon { background-color: #800000; color: #ffffff; }
+
+        /* Styling Kartu Villa (Biar Rapi & Tidak Polosan) */
+        .villa-card {
+            background-color: #fff;
+            border: 1px solid #eaeaea;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+        
+        /* Kunci Tinggi Gambar Agar Tidak Kepanjangan */
+        .villa-img {
+            width: 100%;
+            height: 280px; 
+            object-fit: cover; 
+            object-position: center; 
+        }
+        
+        .villa-info {
+            padding: 16px;
+            border-top: 4px solid #800000;
+        }
+        
+        /* Styling Badge Spesifikasi */
+        .spec-badge {
+            background-color: #fdf5f5;
+            border: 1px solid #f5c2c2;
+            color: #800000;
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
     </style>
 </head>
 <body>
 
 <div class="bliss-container position-relative pb-5">
     
-    <!-- Top Navigation (Tombol Kembali) -->
+    <!-- Top Navigation -->
     <div class="p-3 border-bottom d-flex align-items-center">
-        <!-- Link ini akan mengarahkan user kembali ke menu utama -->
         <a href="index.html" class="back-btn d-flex align-items-center gap-2">
             <i class="bi bi-arrow-left fs-5"></i> Kembali ke Menu
         </a>
     </div>
 
-    <!-- Konten Katalog Villa (Bisa kamu isi foto/teks di sini) -->
-    <div class="p-4 text-center">
-        <h3 class="fw-bold" style="color: #800000;">Katalog Eksklusif</h3>
-        <p class="text-muted">9 Villas 100+ Hunian</p>
-        
-        <!-- Contoh Kotak Gambar Placeholder -->
-        <h5 class="fw-bold text-start">Bliss Villas 1 (Scandinavian)</h5>
-        <p class="text-start text-muted small">Luas Hunian: 6m*12m | 31 unit hunian</p>
-        <img src="Bliss Villa 1.png" class="img-fluid rounded shadow-sm mb-3" alt="Villa 1">
-        
-        <h5 class="fw-bold text-start">Bliss Villas 2 (American Classic)</h5>
-        <p class="text-start text-muted small">Luas Tanah: 3.495m*4899m | Luas Hunian: 6m*12,5m | 17 unit hunian</p>
-        <img src="Bliss Villa 2.png" class="img-fluid rounded shadow-sm mb-3" alt="Villa 2">
-        
-        <h5 class="fw-bold text-start">Bliss Villas 3 (Scandinavian 1 lantai)</h5>
-        <p class="text-start text-muted small">Luas Tanah: 17m*107m | Luas Hunian: 6m*10m | 16 unit hunian</p>
-        <img src="Bliss Villa 3.png" class="img-fluid rounded shadow-sm mb-3" alt="Villa 3">
-        
-        <h5 class="fw-bold text-start">Bliss Villas 5 (American Classic)</h5>
-        <p class="text-start text-muted small">Luas Tanah: 17m*82m | Luas Hunian: 6m*11,5m | 11 unit hunian</p>
-        <img src="Bliss Villa 5.png" class="img-fluid rounded shadow-sm mb-3" alt="Villa 5">
-        
-        <h5 class="fw-bold text-start">Bliss Villas 6 (Modern Minimalis)</h5>
-        <p class="text-start text-muted small">Luas Tanah: 16m*99,75m | Luas Hunian: 6m*10m | 15 unit hunian</p>
-        <img src="Bliss Villa 6.png" class="img-fluid rounded shadow-sm mb-3" alt="Villa 6">
-        
-        <h5 class="fw-bold text-start">Bliss Villas 7 (Scandinavian)</h5>
-        <p class="text-start text-muted small">Luas Tanah: 82m*25,5m | Luas Hunian: 7m*10m | 26 unit hunian</p>
-        <img src="Bliss Villa 7.png" class="img-fluid rounded shadow-sm mb-3" alt="Villa 7">
-        
-        <h5 class="fw-bold text-start">Bliss Villas 8 (American Classic)</h5>
-        <p class="text-start text-muted small">Luas Tanah: 26m*105m | 23 unit hunian</p>
-        <img src="Bliss Villa 8.png" class="img-fluid rounded shadow-sm mb-3" alt="Villa 8">
-        
-        <h5 class="fw-bold text-start">Bliss Villas 9 (Modern Tropis)</h5>
-        <p class="text-start text-muted small">Luas Tanah: 26m*104,5m | Luas Hunian: 7m*10m | 28 unit hunian</p>
-        <img src="Bliss Villa 9.png" class="img-fluid rounded shadow-sm mb-3" alt="Villa 9">
+    <!-- Header Content -->
+    <div class="p-4 text-center pb-2">
+        <h3 class="fw-bold text-maroon">Katalog Eksklusif</h3>
+        <p class="text-muted small mb-0">9 Villas 100+ Hunian</p>
     </div>
 
-    <div class="text-center mt-5 pb-4">
-            <p class="text-muted mb-0" style="font-size: 0.75rem;">&copy; 2026 awrcreativeblissgroup</p>
+    <!-- Daftar Katalog Villa -->
+    <div class="px-4 mt-3">
+
+        <!-- VILLA 1 -->
+        <div class="villa-card">
+            <img src="Bliss Villa 1.png" class="villa-img" alt="Bliss Villas 1">
+            <div class="villa-info">
+                <h5 class="fw-bold text-maroon mb-1">Bliss Villas 1</h5>
+                <p class="text-muted small mb-3">Scandinavian</p>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="spec-badge"><i class="bi bi-rulers"></i> Hunian: 6m x 12m</span>
+                    <span class="spec-badge"><i class="bi bi-house-door"></i> 31 Unit Hunian</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- VILLA 2 -->
+        <div class="villa-card">
+            <img src="Bliss Villa 2.png" class="villa-img" alt="Bliss Villas 2">
+            <div class="villa-info">
+                <h5 class="fw-bold text-maroon mb-1">Bliss Villas 2</h5>
+                <p class="text-muted small mb-3">American Classic</p>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="spec-badge"><i class="bi bi-aspect-ratio"></i> Tanah: 3.495m x 4.899m</span>
+                    <span class="spec-badge"><i class="bi bi-rulers"></i> Hunian: 6m x 12.5m</span>
+                    <span class="spec-badge"><i class="bi bi-house-door"></i> 17 Unit Hunian</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- VILLA 3 -->
+        <div class="villa-card">
+            <img src="Bliss Villa 3.png" class="villa-img" alt="Bliss Villas 3">
+            <div class="villa-info">
+                <h5 class="fw-bold text-maroon mb-1">Bliss Villas 3</h5>
+                <p class="text-muted small mb-3">Scandinavian 1 Lantai</p>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="spec-badge"><i class="bi bi-aspect-ratio"></i> Tanah: 17m x 107m</span>
+                    <span class="spec-badge"><i class="bi bi-rulers"></i> Hunian: 6m x 10m</span>
+                    <span class="spec-badge"><i class="bi bi-house-door"></i> 16 Unit Hunian</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- VILLA 5 -->
+        <div class="villa-card">
+            <img src="Bliss Villa 5.png" class="villa-img" alt="Bliss Villas 5">
+            <div class="villa-info">
+                <h5 class="fw-bold text-maroon mb-1">Bliss Villas 5</h5>
+                <p class="text-muted small mb-3">American Classic</p>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="spec-badge"><i class="bi bi-aspect-ratio"></i> Tanah: 17m x 82m</span>
+                    <span class="spec-badge"><i class="bi bi-rulers"></i> Hunian: 6m x 11.5m</span>
+                    <span class="spec-badge"><i class="bi bi-house-door"></i> 11 Unit Hunian</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- VILLA 6 -->
+        <div class="villa-card">
+            <img src="Bliss Villa 6.png" class="villa-img" alt="Bliss Villas 6">
+            <div class="villa-info">
+                <h5 class="fw-bold text-maroon mb-1">Bliss Villas 6</h5>
+                <p class="text-muted small mb-3">Modern Minimalis</p>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="spec-badge"><i class="bi bi-aspect-ratio"></i> Tanah: 16m x 99.75m</span>
+                    <span class="spec-badge"><i class="bi bi-rulers"></i> Hunian: 6m x 10m</span>
+                    <span class="spec-badge"><i class="bi bi-house-door"></i> 15 Unit Hunian</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- VILLA 7 -->
+        <div class="villa-card">
+            <img src="Bliss Villa 7.png" class="villa-img" alt="Bliss Villas 7">
+            <div class="villa-info">
+                <h5 class="fw-bold text-maroon mb-1">Bliss Villas 7</h5>
+                <p class="text-muted small mb-3">Scandinavian</p>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="spec-badge"><i class="bi bi-aspect-ratio"></i> Tanah: 82m x 25.5m</span>
+                    <span class="spec-badge"><i class="bi bi-rulers"></i> Hunian: 7m x 10m</span>
+                    <span class="spec-badge"><i class="bi bi-house-door"></i> 26 Unit Hunian</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- VILLA 8 -->
+        <div class="villa-card">
+            <img src="Bliss Villa 8.png" class="villa-img" alt="Bliss Villas 8">
+            <div class="villa-info">
+                <h5 class="fw-bold text-maroon mb-1">Bliss Villas 8</h5>
+                <p class="text-muted small mb-3">American Classic</p>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="spec-badge"><i class="bi bi-aspect-ratio"></i> Tanah: 26m x 105m</span>
+                    <span class="spec-badge"><i class="bi bi-house-door"></i> 23 Unit Hunian</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- VILLA 9 -->
+        <div class="villa-card">
+            <img src="Bliss Villa 9.png" class="villa-img" alt="Bliss Villas 9">
+            <div class="villa-info">
+                <h5 class="fw-bold text-maroon mb-1">Bliss Villas 9</h5>
+                <p class="text-muted small mb-3">Modern Tropis</p>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="spec-badge"><i class="bi bi-aspect-ratio"></i> Tanah: 26m x 104.5m</span>
+                    <span class="spec-badge"><i class="bi bi-rulers"></i> Hunian: 7m x 10m</span>
+                    <span class="spec-badge"><i class="bi bi-house-door"></i> 28 Unit Hunian</span>
+                </div>
+            </div>
+        </div>
+
     </div>
+    
+    <!-- Footer -->
+    <div class="text-center mt-4 pb-4 border-top pt-4 mx-4">
+        <p class="text-muted mb-0" style="font-size: 0.75rem;">&copy; 2026 awrcreativeblissgroup</p>
+    </div>
+
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
